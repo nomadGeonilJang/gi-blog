@@ -2,10 +2,10 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
-const Header = ({ siteTitle }) => (
+const Header = ({ siteTitle }:any) => (
   <header
     style={{
-      background: `rebeccapurple`,
+      background: "rebeccapurple",
       marginBottom: `1.45rem`,
     }}
   >
