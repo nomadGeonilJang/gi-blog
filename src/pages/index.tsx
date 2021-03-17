@@ -6,14 +6,7 @@ import styled from "styled-components";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
-const BlogLink = styled( Link )`
-  text-decoration:none;
-`;
 
-const BlogTitle = styled.h3`
-  margin-bottom:20px;
-  color:blue
-`;
 
 const IndexPage = ( { data }:any ) => {
   console.log( data );
@@ -21,7 +14,7 @@ const IndexPage = ( { data }:any ) => {
     <Layout>
       <SEO title="Home" />
       <div>
-        <h1>Geonil's Thoughts </h1>
+        <h1> 장건일 블로그 </h1>
         <h4>{data.allMarkdownRemark.totalCount}</h4>
         {
           data.allMarkdownRemark.edges.map( ( { node }:any ) => (
@@ -40,6 +33,7 @@ const IndexPage = ( { data }:any ) => {
 };
 
 export default IndexPage;
+
 export const query = graphql`
 query {
   allMarkdownRemark(sort:{fields:[frontmatter___date], order:DESC}) {
@@ -59,4 +53,13 @@ query {
     totalCount
   }
 }
+`;
+
+const BlogLink = styled( Link )`
+  text-decoration:none;
+`;
+
+const BlogTitle = styled.h3`
+  margin-bottom:20px;
+  color:blue
 `;
