@@ -1,7 +1,6 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.com/docs/node-apis/
- */
-
-// You can delete this file if you're not using it
+exports.onCreatenode = ({node, actions}) => {
+    const { createNodeField } = actions 
+    if(node.internal.type === "MarkdownRemark"){
+        
+    }
+}
